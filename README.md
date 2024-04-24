@@ -12,6 +12,8 @@ python3 preprocessing.py ../input_data/data-extended.csv ../input_data/mappings.
 ```
 ### Step 2 - Step 6:
 
+You will need RML-MAPPER: https://github.com/RMLio/rmlmapper-java/
+
 ```bash
 python3 script.py ../preprocessed_data/preprocessed_data.csv
 ```
