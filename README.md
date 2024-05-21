@@ -9,7 +9,7 @@ Data pipeline for representing data according to the RERS-Q+ ontology
 ```bash
 python3 dataPreprocessing.py ../input_data/data-extended.csv ../input_data/mappings.csv ../preprocessed_data
 ```
-### Step 2 - Step 6:
+### Step 2 - Step 5:
 
 ```bash
 python3 initiate.py ../upload/
