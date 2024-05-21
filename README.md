@@ -12,5 +12,5 @@ python3 dataPreprocessing.py ../input_data/data-extended.csv ../input_data/mappi
 ### Step 2 - Step 6:
 
 ```bash
-python3 initiate.py ../
+python3 initiate.py ../upload/
 ```
