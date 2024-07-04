@@ -250,5 +250,6 @@ def generatePart(pattern_type,field_id,ontology_mapping,case_id):
         return f"{base}ClinicalSituationSt_{ontology_mapping}_{field_id}_{case_id}"
     else:
         return ''
+    
 
     

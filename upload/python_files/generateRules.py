@@ -366,6 +366,7 @@ def main():
       resq-function: http://ontology.resq.um.es/RES-Q_Functions/
       grel: http://users.ugent.be/bjdmeest/function/grel.ttl#
       rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+      xsd: http://www.w3.org/2001/XMLSchema#
 
 
     mappings:

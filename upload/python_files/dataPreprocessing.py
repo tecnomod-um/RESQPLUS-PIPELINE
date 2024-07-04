@@ -21,13 +21,24 @@ def main(csvdata, csvmapping, output_path):
         # Procesar cada fila en el DataFrame de mapeo
         for _, map_row in mapping_df.iterrows():
             field_id = map_row['field_id']
+            #el campo en mapping file está en los datos
             if field_id in data_df.columns:
-                # Verificar si el valor en data_df coincide con el valor en mapping_df
-                if data_row[field_id] == map_row['categorical_value']:
+                # Verificar si el valor en data_df coincide con el valor en mapping_df y en caso de tener valor categórico, si coincide
+                if not pd.notna(map_row['categorical_value']) or data_row[field_id] == map_row['categorical_value']:
+                    #print(f"field_id={field_id} data={data_row[field_id]} mapping={map_row['categorical_value']}")
                     result_row = map_row.to_dict()
+                    if map_row['value_type'] == 'Boolean' and not pd.notna(data_row[field_id]):
+                        continue
+                    if map_row['value_type'] == 'Integer' and pd.notna(data_row[field_id]):
+                        #print(f"field = {field_id}")
+                        value = int(data_row[field_id])
+                    elif map_row['value_type'] == 'Integer':
+                        continue
+                    else:
+                        value = data_row[field_id]
                     result_row.update({
                         'case_id': case_id,
-                        'field_value': data_row[field_id]
+                        'field_value': value
                     })
                     
                     # Verificar si `procedure_result` tiene un valor
