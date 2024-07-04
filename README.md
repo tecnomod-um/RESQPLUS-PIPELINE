@@ -11,6 +11,8 @@ python3 dataPreprocessing.py ../input_data/data-extended.csv ../input_data/mappi
 ```
 ### Step 2 - Step 5:
 
+Create under upload the following folders: csv, instances, rules
+
 ```bash
-python3 initiate.py ../upload/
+python3 initiate.py ../
 ```
